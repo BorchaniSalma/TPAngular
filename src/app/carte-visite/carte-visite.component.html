@@ -1,0 +1,112 @@
+<div class="card-container" *ngIf="personne" [style.backgroundColor]="color">
+  <div class="card">
+    <div class="front">
+      <div class="cover">
+        <img src="assets/images/rotating_card_thumb.jpg" />
+      </div>
+      <div class="user">
+        <img class="img-circle" src="assets/images/{{ personne.path }}" />
+      </div>
+      <div class="content">
+        <div class="main">
+          <h3 class="name">{{ personne.firstname }} {{ personne.name }}</h3>
+          <p class="profession">{{ personne.job }}</p>
+          <p class="text-center">
+            {{ personne.citation }}
+          </p>
+        </div>
+        <div class="footer">
+          <i class="fa fa-mail-forward"></i> Auto Rotation
+        </div>
+      </div>
+    </div>
+    <!-- end front panel -->
+    <div class="back">
+      <div class="header">
+        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+      </div>
+      <div class="content">
+        <div class="main">
+          <h4 class="text-center">Age</h4>
+          <p class="text-center">
+            {{ personne.age }}
+          </p>
+
+          <div class="stats-container">
+            <div class="stats">
+              <h4>235</h4>
+              <p>Followers</p>
+            </div>
+            <div class="stats">
+              <h4>114</h4>
+              <p>Following</p>
+            </div>
+            <div class="stats">
+              <h4>35</h4>
+              <p>Projects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="social-links text-center">
+          <button class="btn btn-dark" (click)="goToDetails()">Détails</button>
+        </div>
+      </div>
+    </div>
+    <!-- end back panel -->
+  </div>
+  <!-- end card -->
+</div>
+
+<form class="flex flex-col gap-4">
+  <label>Nom:</label>
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="nom"
+    [(ngModel)]="personne!.name"
+  />
+
+  <label>Prénom:</label>
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="prenom"
+    [(ngModel)]="personne!.firstname"
+  />
+
+  <label>Job:</label>
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="job"
+    [(ngModel)]="personne!.job"
+  />
+
+  <label>Image:</label>
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="image"
+    [(ngModel)]="personne!.path"
+  />
+
+  <label>Citation Favorite:</label>
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="citaiton"
+    [(ngModel)]="personne!.citation"
+  />
+
+  <label>Age:</label>
+  <input
+    type="text"
+    class="shadow-md p-3"
+    name="keys"
+    [(ngModel)]="personne!.age"
+  />
+</form>
+
+<app-fils [colorPere]="color" (ColorEmit)="showValue($event)"></app-fils>
