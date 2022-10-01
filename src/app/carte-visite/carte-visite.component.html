@@ -1,9 +1,7 @@
-<div class="card-container" *ngIf="personne" [style.backgroundColor]="color">
+<div class="card-container" *ngIf="personne">
   <div class="card">
     <div class="front">
-      <div class="cover">
-        <img src="assets/images/rotating_card_thumb.jpg" />
-      </div>
+      <div class="cover" [style.backgroundColor]="color"></div>
       <div class="user">
         <img class="img-circle" src="assets/images/{{ personne.path }}" />
       </div>
@@ -48,11 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="footer">
-        <div class="social-links text-center">
-          <button class="btn btn-dark" (click)="goToDetails()">Détails</button>
-        </div>
-      </div>
+      <div class="footer"></div>
     </div>
     <!-- end back panel -->
   </div>

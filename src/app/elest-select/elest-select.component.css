@@ -1,0 +1,15 @@
+.listselect {
+  /* position: absolute; */
+  left: 20px;
+  top: 20 px;
+  /* background-color: blue; */
+  display: flex;
+  list-style-type: none;
+}
+.listselect ul {
+  display: flex;
+  list-style-type: none;
+}
+.listselect ul li {
+  margin: 10px;
+}

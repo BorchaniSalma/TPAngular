@@ -13,8 +13,8 @@ export class CarteVisiteComponent implements OnInit {
     name: 'Borcheni',
     firstname: 'Salma',
     age: 22,
-    path: '/',
-    citation: 'Man Jadda wahad',
+    path: 'salma.jpg',
+    citation: 'Man Jadda wajad',
     job: 'student',
   };
   @Output() onClickEvent: EventEmitter<string> = new EventEmitter();
@@ -24,10 +24,6 @@ export class CarteVisiteComponent implements OnInit {
 
   ngOnInit() {}
 
-  goToDetails() {
-    const link = ['cv', this.personne.id];
-    this.router.navigate(link);
-  }
   onClick() {
     this.onClickEvent.emit(this.favoriteColor);
   }
