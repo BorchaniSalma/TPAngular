@@ -7,20 +7,12 @@ import { Personne } from '../Model/personne';
   styleUrls: ['./item.component.css'],
 })
 export class ItemComponent implements OnInit {
-  @Input() personne: Personne = {
-    id: 1,
-    name: 'Borcheni',
-    firstname: 'Salma',
-    age: 22,
-    path: '/',
-    cin: 65448,
-    job: 'student',
-  }; // f()
-  @Output() selectItem = new EventEmitter();
+  @Input() personne: Personne | null = null;
+  @Output() selectItem = new EventEmitter<Personne>();
   constructor() {}
 
   ngOnInit() {}
   itemSelected() {
-    this.selectItem.emit(this.personne);
+    if (this.personne) this.selectItem.emit(this.personne);
   }
 }

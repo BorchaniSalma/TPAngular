@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
   getPersonnes(): Personne[] {
     return this.personnes;
   }
-  @Output() sendPersonneToCv = new EventEmitter();
+  @Output() sendPersonneToCv = new EventEmitter<Personne>();
 
   ngOnInit() {}
   sendItem(personne: Personne) {
