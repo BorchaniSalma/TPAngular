@@ -7,16 +7,16 @@ import { Personne } from '../Model/personne';
   styleUrls: ['./cv.component.css'],
 })
 export class CvComponent implements OnInit {
-  selectedPersonne: Personne = {
-    id: 1,
-    name: 'Borcheni',
-    firstname: 'Salma',
-    age: 22,
-    path: '/',
-    cin: 516846,
-    job: 'student',
-  };
+  selectedPersonne: Personne | null = null;
   constructor() {}
+  personnes: Personne[] = [
+    new Personne(1, 'Borchani', 'Salma', 22, 'salma.jpg', 111125, 'student'),
+    new Personne(2, 'Bezine', 'Amira', 22, 'amira.jpg', 548411, 'student'),
+    new Personne(3, 'Ben mim', 'Samer', 3, 'samer.jpg', 5451, 'student'),
+  ];
+  getPersonnes(): Personne[] {
+    return this.personnes;
+  }
 
   ngOnInit() {}
   selectPersonne(personne: Personne) {

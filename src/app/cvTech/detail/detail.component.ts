@@ -8,15 +8,7 @@ import { Personne } from '../Model/personne';
   styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent implements OnInit {
-  @Input() personne: Personne = {
-    id: 1,
-    name: 'Borcheni',
-    firstname: 'Salma',
-    age: 22,
-    path: '/',
-    cin: 45552,
-    job: 'student',
-  };
+  @Input() personne: Personne | null = null;
   constructor(private router: Router) {}
 
   ngOnInit() {}
