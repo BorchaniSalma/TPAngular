@@ -12,6 +12,7 @@ import { DetailComponent } from './cvTech/detail/detail.component';
 import { ItemComponent } from './cvTech/item/item.component';
 import { ListComponent } from './cvTech/list/list.component';
 import { ElestSelectComponent } from './elest-select/elest-select.component';
+import { ArcEnCielDirective } from './directives/arc-en-ciel.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ElestSelectComponent } from './elest-select/elest-select.component';
     ItemComponent,
     ListComponent,
     ElestSelectComponent,
+    ArcEnCielDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
