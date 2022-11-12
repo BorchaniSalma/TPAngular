@@ -16,9 +16,7 @@ import { ArcEnCielDirective } from './directives/arc-en-ciel.directive';
 import { WordComponent } from './directives/word/word.component';
 import { DefaultImagePipe } from './default-image.pipe';
 import { CvEmbaucheComponent } from './cvTech/cv/cv-embauche/cv-embauche.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,13 +33,7 @@ import { ToastrModule } from 'ngx-toastr';
     DefaultImagePipe,
     CvEmbaucheComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    ToastrModule.forRoot(),
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

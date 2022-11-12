@@ -19,4 +19,7 @@ export class DetailComponent implements OnInit {
   Embaucher() {
     this.EmbaucheService.Embaucher(this.personne);
   }
+  Debaucher() {
+    this.EmbaucheService.Debaucher(this.personne);
+  }
 }
