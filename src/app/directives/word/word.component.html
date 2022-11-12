@@ -1,0 +1,19 @@
+<p
+  [ngStyle]="{
+    color: color,
+    'font-family': font,
+    'font-size': size + 'px'
+  }"
+>
+  Test
+</p>
+Couleur: <input type="color" class="form-control" [(ngModel)]="color" /> Taille:
+<input type="number" class="form-control" [(ngModel)]="size" />
+<select [(ngModel)]="font">
+  <option value="Times New Roman">Times New Roman</option>
+  <option value="Arial">Arial</option>
+  <option value="Georgia">Georgia</option>
+  <option value="Helvetica">Helvetica</option>
+  <option value="Monaco">Monaco</option>
+  <option value="Copperplate">Copperplate</option>
+</select>
