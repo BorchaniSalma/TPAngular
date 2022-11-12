@@ -3,7 +3,10 @@
     <div class="front">
       <div class="cover"></div>
       <div class="user">
-        <img class="img-circle" src="assets/images/{{ personne.path }}" />
+        <img
+          class="img-circle"
+          src="assets/images/{{ personne.path | defaultImage }}"
+        />
       </div>
       <div class="content">
         <div class="main">
@@ -48,7 +51,7 @@
       </div>
       <div class="footer">
         <div class="social-links text-center">
-          <button class="btn btn-dark">Détails</button>
+          <button class="btn btn-dark" (click)="Embaucher()">Embaucher</button>
         </div>
       </div>
     </div>

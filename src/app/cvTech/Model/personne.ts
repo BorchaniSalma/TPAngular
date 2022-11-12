@@ -6,13 +6,16 @@ export class Personne {
   path: string;
   cin: number;
   job: string;
-  constructor(id: number = 0,
-              name: string = '',
-              firstname: string = '',
-              age: number = 0,
-              path: string = '',
-              cin: number = 0,
-              job: string = ''
+  hired: boolean;
+  constructor(
+    id: number = 0,
+    name: string = '',
+    firstname: string = '',
+    age: number = 0,
+    path: string = '',
+    cin: number = 0,
+    job: string = '',
+    hired: boolean = false
   ) {
     this.id = id;
     this.name = name;
@@ -21,5 +24,6 @@ export class Personne {
     this.path = path;
     this.cin = cin;
     this.job = job;
+    this.hired = hired;
   }
 }

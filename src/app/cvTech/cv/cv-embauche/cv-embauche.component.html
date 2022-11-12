@@ -1,0 +1,13 @@
+<h1>Liste des Personnes embauchées</h1>
+<div *ngIf="personnesEmb">
+  <span *ngFor="let personne of personnesEmb">
+    <img
+      src="assets/images/{{ personne.path | defaultImage }}"
+      width="160px"
+      height="160px"
+      class="rounded-circle"
+      alt="{{ personne.firstname }} {{ personne.name }}"
+    />
+    {{ personne.firstname }} {{ personne.name }}
+  </span>
+</div>

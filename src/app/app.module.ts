@@ -14,7 +14,11 @@ import { ListComponent } from './cvTech/list/list.component';
 import { ElestSelectComponent } from './elest-select/elest-select.component';
 import { ArcEnCielDirective } from './directives/arc-en-ciel.directive';
 import { WordComponent } from './directives/word/word.component';
+import { DefaultImagePipe } from './default-image.pipe';
+import { CvEmbaucheComponent } from './cvTech/cv/cv-embauche/cv-embauche.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +32,16 @@ import { WordComponent } from './directives/word/word.component';
     ElestSelectComponent,
     ArcEnCielDirective,
     WordComponent,
+    DefaultImagePipe,
+    CvEmbaucheComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

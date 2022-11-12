@@ -9,6 +9,9 @@ import { Personne } from '../Model/personne';
 export class ItemComponent implements OnInit {
   @Input() personne: Personne | null = null;
   @Output() selectItem = new EventEmitter<Personne>();
+  color = 'grey';
+  font = 'Monaco';
+  size = 18;
   constructor() {}
 
   ngOnInit() {}
