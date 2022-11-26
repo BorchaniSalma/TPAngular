@@ -7,6 +7,7 @@ import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 import { CvComponent } from './cvTech/cv/cv.component';
 import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
 import { WordComponent } from './directives/word/word.component';
+import { AuthentificationComponent } from './authentification/authentification.component';
 const routes: Routes = [
   { path: 'cv', children : [
     { path: '', component: CvComponent },
@@ -14,8 +15,9 @@ const routes: Routes = [
     { path: ':id', component: CvDetailsComponentComponent },
     { path: 'delete/:id', component: DeleteCvComponent },
 
-  ] },
 
+  ] },
+  { path: 'authentification', component: AuthentificationComponent },
   { path: 'carteVisite', component: CarteVisiteComponent },
   { path: 'color', component: ColorfulDivComponent },
   { path: 'word', component: WordComponent },
