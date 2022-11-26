@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {Router} from '@angular/router';
+import { CvServiceService } from 'src/app/services/cv-service.service';
+
 
 @Component({
   selector: 'app-add-cv',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-cv.component.css']
 })
 export class AddCvComponent implements OnInit {
+  constructor(
+    private cvService : CvServiceService,
+    private router: Router
+  ) { }
 
-  constructor() { }
+  ngOnInit() {
+  }
 
-  ngOnInit(): void {
+  addPersonne(formulaire: NgForm) {
+    this.cvService.addPersonne(formulaire.value)
   }
 
 }

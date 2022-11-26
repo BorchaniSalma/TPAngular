@@ -23,4 +23,8 @@ export class CvServiceService {
   deletePersonneById(id: number): void {
     this.personnes = this.personnes.filter((p) => p.id != id);
   }
+  addPersonne(personne:Personne):void{
+   this.personnes.push(personne);
+  }
+
 }

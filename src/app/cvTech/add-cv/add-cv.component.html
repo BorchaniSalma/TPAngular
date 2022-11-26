@@ -1,1 +1,16 @@
-<p>add-cv works!</p>
+<form #formulaire='ngForm'>
+    <label for="cin">Cin</label>
+    <input id="id" type="text" class="form-control" ngModel name="id">
+    <label for="name">Name</label>
+    <input id="name" type="text" class="form-control" ngModel name="name">
+    <label for="firstname">firstname</label>
+    <input id="firstname" type="text" class="form-control" ngModel name="firstname">
+    <label for="age">Age</label>
+    <input id="age" pattern="\d{1,2}" type="text" class="form-control" ngModel name="age">
+    <label for="path">Path</label>
+    <input id="path" type="text" class="form-control" ngModel name="path">
+    <label for="job">Job</label>
+    <input id="job" type="text" class="form-control" ngModel name="job">
+  
+    <button (click)="addPersonne(formulaire)" class="btn btn-primary">Ajouter</button>
+  </form>

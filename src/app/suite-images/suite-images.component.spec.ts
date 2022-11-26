@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthentificationComponent } from './authentification.component';
+import { SuiteImagesComponent } from './suite-images.component';
 
-describe('AuthentificationComponent', () => {
-  let component: AuthentificationComponent;
-  let fixture: ComponentFixture<AuthentificationComponent>;
+describe('SuiteImagesComponent', () => {
+  let component: SuiteImagesComponent;
+  let fixture: ComponentFixture<SuiteImagesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuthentificationComponent ]
+      declarations: [ SuiteImagesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthentificationComponent);
+    fixture = TestBed.createComponent(SuiteImagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

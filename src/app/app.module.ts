@@ -20,8 +20,9 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
 import { CvDetailsComponentComponent } from './cv-details-component/cv-details-component.component';
 import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
-import { AuthentificationComponent } from './authentification/authentification.component';
 
+import { AuthComponent } from './auth/auth.component';
+import { SuiteImagesComponent } from './suite-images/suite-images.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,9 @@ import { AuthentificationComponent } from './authentification/authentification.c
     CvDetailsComponentComponent,
     AddCvComponent,
     DeleteCvComponent,
-    AuthentificationComponent,
+
+    AuthComponent,
+     SuiteImagesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
