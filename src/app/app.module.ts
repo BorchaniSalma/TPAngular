@@ -17,6 +17,7 @@ import { WordComponent } from './directives/word/word.component';
 import { DefaultImagePipe } from './default-image.pipe';
 import { CvEmbaucheComponent } from './cvTech/cv/cv-embauche/cv-embauche.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { CvDetailsComponentComponent } from './cv-details-component/cv-details-component.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
     DefaultImagePipe,
     CvEmbaucheComponent,
     RouterSimulatorComponent,
+    CvDetailsComponentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

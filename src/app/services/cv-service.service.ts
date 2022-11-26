@@ -17,4 +17,7 @@ export class CvServiceService {
   getPersonnes(): Personne[] {
     return this.personnes;
   }
+  getPersonneById(id: number): Personne {
+    return this.personnes.find((p) => p.id == id);
+  }
 }

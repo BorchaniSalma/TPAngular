@@ -22,4 +22,8 @@ export class DetailComponent implements OnInit {
   Debaucher() {
     this.EmbaucheService.Debaucher(this.personne);
   }
+  info() {
+    console.log("info");
+    this.router.navigate(['cv', this.personne.id]);
+  }
 }
