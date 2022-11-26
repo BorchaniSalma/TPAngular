@@ -16,6 +16,7 @@ import { ArcEnCielDirective } from './directives/arc-en-ciel.directive';
 import { WordComponent } from './directives/word/word.component';
 import { DefaultImagePipe } from './default-image.pipe';
 import { CvEmbaucheComponent } from './cvTech/cv/cv-embauche/cv-embauche.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CvEmbaucheComponent } from './cvTech/cv/cv-embauche/cv-embauche.compone
     WordComponent,
     DefaultImagePipe,
     CvEmbaucheComponent,
+    RouterSimulatorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
