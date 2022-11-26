@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
 import { CarteVisiteComponent } from './carte-visite/carte-visite.component';
 import { ColorfulDivComponent } from './colorful-div/colorful-div.component';
 import { CvDetailsComponentComponent } from './cv-details-component/cv-details-component.component';
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'carteVisite', component: CarteVisiteComponent },
   { path: 'color', component: ColorfulDivComponent },
   { path: 'word', component: WordComponent },
-  { path: 'auth', component: CarteVisiteComponent },
+  { path: 'auth', component: AuthComponent },
 
   { path: '', component: CvComponent },
   { path: '**', component: CvComponent },
