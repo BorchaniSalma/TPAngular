@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Personne } from '../cvTech/Model/personne';
 import { CvServiceService } from '../services/cv-service.service';
 
@@ -12,7 +12,9 @@ export class CvDetailsComponentComponent implements OnInit {
   personne: Personne;
   constructor(
     private cvService: CvServiceService,
-    private activatedRoute: ActivatedRoute 
+    private activatedRoute: ActivatedRoute,
+    private router: Router 
+    
   ) {}
 
 
@@ -23,4 +25,8 @@ export class CvDetailsComponentComponent implements OnInit {
       }
     )  }
 
+delete(){
+  this.cvService.deletePersonneById(this.personne.id);
+  this.router.navigate(['cv']);
+}
 }

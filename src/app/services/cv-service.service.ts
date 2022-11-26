@@ -20,4 +20,7 @@ export class CvServiceService {
   getPersonneById(id: number): Personne {
     return this.personnes.find((p) => p.id == id);
   }
+  deletePersonneById(id: number): void {
+    this.personnes = this.personnes.filter((p) => p.id != id);
+  }
 }

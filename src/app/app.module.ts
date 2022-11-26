@@ -18,6 +18,8 @@ import { DefaultImagePipe } from './default-image.pipe';
 import { CvEmbaucheComponent } from './cvTech/cv/cv-embauche/cv-embauche.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { CvDetailsComponentComponent } from './cv-details-component/cv-details-component.component';
+import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
+import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { CvDetailsComponentComponent } from './cv-details-component/cv-details-c
     CvEmbaucheComponent,
     RouterSimulatorComponent,
     CvDetailsComponentComponent,
+    AddCvComponent,
+    DeleteCvComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
