@@ -17,10 +17,11 @@ const routes: Routes = [
 
 
   ] },
-  { path: 'authentification', component: AuthentificationComponent },
   { path: 'carteVisite', component: CarteVisiteComponent },
   { path: 'color', component: ColorfulDivComponent },
   { path: 'word', component: WordComponent },
+  { path: 'auth', component: AuthentificationComponent },
+
   { path: '', component: CvComponent },
   { path: '**', component: CvComponent },
 
