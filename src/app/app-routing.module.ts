@@ -19,6 +19,8 @@ const routes: Routes = [
   { path: 'carteVisite', component: CarteVisiteComponent },
   { path: 'color', component: ColorfulDivComponent },
   { path: 'word', component: WordComponent },
+  { path: 'auth', component: CarteVisiteComponent },
+
   { path: '', component: CvComponent },
   { path: '**', component: CvComponent },
 
