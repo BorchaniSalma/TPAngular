@@ -8,12 +8,10 @@ import { Personne } from '../Model/personne';
 })
 export class ListComponent implements OnInit {
   @Input() personnes: Personne[] = [];
+
   constructor() {}
 
-  @Output() sendPersonneToCv = new EventEmitter<Personne>();
 
   ngOnInit() {}
-  sendItem(personne: Personne) {
-    this.sendPersonneToCv.emit(personne);
-  }
+
 }

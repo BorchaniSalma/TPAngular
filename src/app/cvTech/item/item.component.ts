@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CvServiceService } from 'src/app/services/cv-service.service';
 import { Personne } from '../Model/personne';
 
 @Component({
@@ -12,10 +13,12 @@ export class ItemComponent implements OnInit {
   color = 'grey';
   font = 'Monaco';
   size = 18;
-  constructor() {}
+  constructor(private cvService : CvServiceService) {}
 
   ngOnInit() {}
   itemSelected() {
-    if (this.personne) this.selectItem.emit(this.personne);
+    if(this.personne)
+    this.cvService.passValue(this.personne);
+
   }
 }

@@ -2,11 +2,10 @@
   <div class="col-md-6 col-sm-12">
     <app-list
       [personnes]="personnes"
-      (sendPersonneToCv)="selectPersonne($event)"
     ></app-list>
   </div>
   <div class="col-md-6 col-sm-12">
-    <app-detail [personne]="selectedPersonne"></app-detail>
+    <app-detail></app-detail>
   </div>
 </div>
 <app-cv-embauche></app-cv-embauche>

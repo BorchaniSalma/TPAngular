@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Personne } from '../cvTech/Model/personne';
+import { Subject } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -12,7 +14,13 @@ export class CvServiceService {
       new Personne(3, 'Ben mim', 'Samer', 3, 'samer.jpg', 5451, 'student'),
       new Personne(4, 'Random', 'Person', 5, ' ', 5451, 'student'),
     ];
+  } 
+  public CvSubject = new Subject<Personne>();
+
+  passValue(data :  Personne) {
+    this.CvSubject.next(data);
   }
+
 
   getPersonnes(): Personne[] {
     return this.personnes;
